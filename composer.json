@@ -3,9 +3,9 @@
     "description": "Carbon Serialization or JSM Serializer",
     "type": "library",
     "require": {
-        "php": "^7.1 || ^8.0",
+        "php": "^8.2",
         "jms/serializer": "^2.0 || ^3.0",
-        "nesbot/carbon": "^2.5"
+        "nesbot/carbon": "^2.5 || ^3.0"
     },
     "license": "GPL-3.0-or-later",
     "authors": [
@@ -16,8 +16,17 @@
     ],
     "minimum-stability": "RC",
     "autoload": {
-        "psr-0": {
-            "AutumnDev": "src/"
+        "psr-4": {
+            "AutumnDev\\JMS\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AutumnDev\\JMS\\": "test/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10",
+        "ext-simplexml": "*"
     }
 }
